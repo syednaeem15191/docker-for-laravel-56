@@ -3,12 +3,12 @@ services:
   php7:
     build:
       context: docker/apache_php
-    container_name: laravel_56_php
+    container_name: [container_name_fo_php]
     links:
       - db
       - phpmyadmin
     ports:
-      - "81:80"
+      - "[php_port]:80"
     volumes:
       - .:/var/www/project
       - ~/.composer/auth.json:/root/.composer/auth.json
@@ -16,17 +16,17 @@ services:
   db:
     build:
       context: docker/db
-    container_name: laravel_56_db
+    container_name: [container_name_for_db]
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=laravel56
+      - MYSQL_DATABASE=[database_name]
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
     ports:
-      - "3307:3306"
+      - "[db_port]:3306"
   phpmyadmin:
       depends_on:
         - db
       image: phpmyadmin/phpmyadmin
       ports:
-        - "8081:80"
+        - "[phpMyAdmin_port]:80"
