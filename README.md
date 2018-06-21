@@ -1,1 +1,3 @@
-# docker-for-laravel-56
+# php 7.1.18
+# mysql 5.6
+# phpmyadmin
