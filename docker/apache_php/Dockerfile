@@ -42,5 +42,7 @@ RUN docker-php-ext-install -j$(nproc) \
 	sysvmsg \
 	sysvsem \
 	sysvshm
+	
+RUN a2enmod rewrite
 
 COPY apache_config.conf /etc/apache2/sites-enabled/000-default.conf
