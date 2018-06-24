@@ -9,3 +9,7 @@ SETUP
 4.  update database version is /docker/db/Dockerfile
 5. and finally run "docker-compose up --build"
 and everything should be fine,
+
+
+
+COPY config/php.ini /usr/local/etc/php/
