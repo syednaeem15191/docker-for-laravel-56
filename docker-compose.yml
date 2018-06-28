@@ -3,7 +3,7 @@ services:
   php7:
     build:
       context: docker/apache_php
-    container_name: [container_name_fo_php]
+    container_name: [container_name_for_php]
     links:
       - db
       - phpmyadmin
