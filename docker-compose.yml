@@ -18,10 +18,10 @@ services:
       context: docker/db
     container_name: [container_name_for_db]
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=[root]
       - MYSQL_DATABASE=[database_name]
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
+      - MYSQL_USER=[root]
+      - MYSQL_PASSWORD=[root]
     ports:
       - "[db_port]:3306"
   phpmyadmin:
