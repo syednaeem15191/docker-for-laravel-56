@@ -1,4 +1,4 @@
-php 7.1.18, mysql 5.6, apache 2.4, phpmyadmin
+php 7.1.18, mysql 5.6, apache 2.4, phpmyadmin, composer
 
 SETUP
 1.  update [PORTS], [CONTAINER_NAME] & [DB_NAME]" in /docker-compose.yml as required
