@@ -17,6 +17,8 @@ services:
     build:
       context: docker/db
     container_name: [container_name_for_db]
+#    env_file:
+#      - ./project/.env
     environment:
       - MYSQL_ROOT_PASSWORD=[root]
       - MYSQL_DATABASE=[database_name]

@@ -52,6 +52,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 #RUN a2enmod rewrite && service apache2 restart
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs && apt-get install -y npm
+
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 	
 RUN a2enmod rewrite
 
